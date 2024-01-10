@@ -6,13 +6,19 @@ import state from "../store";
 const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
   const snap = useSnapshot(state);
 
+  const activeStyles =
+    isFilterTab && isActiveTab
+      ? { backgroundColor: snap.color, opacity: 0.5 }
+      : { backgroundColor: "transparent", opacity: 1 };
+
   return (
     <div
       key={tab.name}
-      className={`tab-btn ${isFilterTab} ? 'rounded-full
-     : 'rounded-4'}`}
+      className={`tab-btn ${isFilterTab} ? 'rounded-full glasspmorhism' : 'rounded-4'}`}
+      onClick={handleClick}
+      style={activeStyles}
     >
-      willy
+      <img src={tab.icon} />
     </div>
   );
 };
