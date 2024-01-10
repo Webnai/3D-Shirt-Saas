@@ -3,6 +3,8 @@ import { easing } from "maath";
 import { useFrame } from "@react-three/fiber";
 import { AccumulativeShadows, RandomizedLight } from "@react-three/drei";
 
+// ... (import statements remain unchanged)
+
 const Backdrop = () => {
   const shadows = useRef();
 
@@ -19,7 +21,7 @@ const Backdrop = () => {
       <RandomizedLight
         amount={4}
         radius={9}
-        intensity={0.55}
+        intensity={1} // Adjust intensity as needed
         ambient={0.25}
         position={[5, 5, -10]}
       />
@@ -27,7 +29,7 @@ const Backdrop = () => {
       <RandomizedLight
         amount={4}
         radius={5}
-        intensity={0.25}
+        intensity={0.8} // Adjust intensity as needed
         ambient={0.55}
         position={[-5, 5, -9]}
       />
