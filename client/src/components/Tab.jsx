@@ -11,7 +11,9 @@ const Tab = ({ tab, isFilterTab, isActiveTab, handleClick }) => {
       key={tab.name}
       className={`tab-btn ${isFilterTab} ? 'rounded-full
      : 'rounded-4'}`}
-    ></div>
+    >
+      willy
+    </div>
   );
 };
 
